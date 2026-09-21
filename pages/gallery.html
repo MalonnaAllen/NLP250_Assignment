@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <header>
@@ -16,39 +17,99 @@
       <h1>Gallery Test</h1>
     </div>
 
-    <div>
-      <img
-        src="../images/pearl.png"
-        alt="A pixelated version of 'Girl with a Pearl Earring' by Johannes Vermeer."
-      />
-      <img
-        src="../images/starry.png"
-        alt="A pixelated version of 'The Starry Night' by Vincent van Gogh."
-      />
-      <img
-        src="../images/smile.png"
-        alt="A pixelated version of the 'Mona Lisa' by Leonardo da Vinci."
-      />
-      <img
-        src="../images/composition.png"
-        alt="A pixelated version of 'Composition A' by Piet Mondrian."
-      />
-      <img
-        src="../images/devour.png"
-        alt="A pixelated version of 'Saturn Devouring His Son' by Francisco Goya."
-      />
-      <img
-        src="../images/man.png"
-        alt="A pixelated version of 'The Son of Man' by René Magritte."
-      />
-      <img
-        src="../images/wave.png"
-        alt="A pixelated version of 'The Wave' by Hokusai."
-      />
-      <p>This image will eventually overlay on the other images.</p>
-      <img src="../images/frame.png" alt="A pixelated frame." />
+    <!-- Gallery Images -->
+    <div class="container">
+      <div class="gallery-stage">
+        <div class="slide">
+          <div class="numbertext"><p>1 / 7</p></div>
+          <img
+            src="../images/pearl.png"
+            alt="A pixelated version of 'Girl with a Pearl Earring' by Johannes Vermeer."
+          />
+        </div>
+
+        <div class="slide">
+          <div class="numbertext"><p>2 / 7</p></div>
+          <img
+            src="../images/starry.png"
+            alt="A pixelated version of 'The Starry Night' by Vincent van Gogh."
+          />
+        </div>
+
+        <div class="slide">
+          <div class="numbertext"><p>3 / 7</p></div>
+          <img
+            src="../images/smile.png"
+            alt="A pixelated version of the 'Mona Lisa' by Leonardo da Vinci."
+          />
+        </div>
+
+        <div class="slide">
+          <div class="numbertext"><p>4 / 7</p></div>
+          <img
+            src="../images/composition.png"
+            alt="A pixelated version of 'Composition A' by Piet Mondrian."
+          />
+        </div>
+
+        <div class="slide">
+          <div class="numbertext"><p>5 / 7</p></div>
+          <img
+            src="../images/devour.png"
+            alt="A pixelated version of 'Saturn Devouring His Son' by Francisco Goya."
+          />
+        </div>
+
+        <div class="slide">
+          <div class="numbertext"><p>6 / 7</p></div>
+          <img
+            src="../images/man.png"
+            alt="A pixelated version of 'The Son of Man' by René Magritte."
+          />
+        </div>
+
+        <div class="slide">
+          <div class="numbertext"><p>7 / 7</p></div>
+          <img
+            src="../images/wave.png"
+            alt="A pixelated version of 'The Wave' by Hokusai."
+          />
+        </div>
+
+        <!-- Decorative frame layered over the active slide -->
+        <img
+          class="frame-overlay"
+          src="../images/frame.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+
+      <!-- Navigation -->
+      <button
+        class="prev"
+        type="button"
+        onclick="plusSlides(-1)"
+        aria-label="Previous slide"
+      >
+        &#10094;
+      </button>
+      <button
+        class="next"
+        type="button"
+        onclick="plusSlides(1)"
+        aria-label="Next slide"
+      >
+        &#10095;
+      </button>
+
+      <!-- Image Caption -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
     </div>
 
+    <!-- Remove Later -->
     <div>
       <p>
         This section will eventually have a rotating gallery to see the artworks
@@ -57,5 +118,6 @@
         drawing board will be.
       </p>
     </div>
+    <script src="../scripts/gallery_script.js"></script>
   </body>
 </html>
